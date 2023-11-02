@@ -154,3 +154,7 @@ function updateHighScore () {
 //     startButton.style.display = "block";
 //     gameOver = true;
 // }
+
+function restart (){
+    location.reload();
+}

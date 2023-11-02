@@ -1,0 +1,39 @@
+body {
+    text-align: center;
+    background-color: lavender;
+}
+
+h1 {
+    font-family: "Times New Roman";
+    color: purple;
+}
+
+#board {
+    height: 700px;
+    width: 470px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.card {
+    height: 130px;
+    width: 100px;
+    margin: 2px;
+    border: 2px plum solid;
+    border-radius: 25px;
+}
+
+.action{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+button {
+    height: 25px;
+    width: 450px;
+    border: 2px purple solid;
+    border-radius: 25px;
+    background: transparent;
+}

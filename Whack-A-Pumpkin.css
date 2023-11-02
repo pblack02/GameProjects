@@ -2,6 +2,7 @@ body {
     text-align: center;
     background-image: url("./img/backgound.jpg");
     background-size: cover;
+    background-repeat: no-repeat;
 }
 h1 {
     color: darkorange;
@@ -33,5 +34,10 @@ h1 {
     -webkit-user-drag: none;
     -webkit-user-select: none;
     -ms-user-select: none;
+}
+
+button {
+    background-color: lightskyblue;
+    border: 1px black solid;
 }
 
