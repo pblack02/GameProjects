@@ -108,7 +108,7 @@ function selectTile (){
         }
 
         if (score >= 20){
-            pumpkinInt = 500;
+            pumpkinInt = 1000/2;
             ghostInt = 1000;
         } else if (score >= 75){
             pumpkinInt = 200;

@@ -65,19 +65,19 @@ function update (){
     if (!outOfBounds(nextPlayer1Y)){
         player1.y = nextPlayer1Y;
     }
-    context.fillRect(player1.x, player1.y, player1.width, player1.height);
+    context.fillRect(player1.x, player1.y, playerWidth, playerHeight);
     // player 2
     // player2.y += player2.velocityY;
     let nextPlayer2Y = player2.y + player2.velocityY;
     if (!outOfBounds(nextPlayer2Y)){
         player2.y = nextPlayer2Y;
     }
-    context.fillRect(player2.x, player2.y, player2.width, player2.height);
+    context.fillRect(player2.x, player2.y, playerWidth, playerHeight);
     // the ball
     context.fillStyle = "white";
     ball.x += ball.velocityX;
     ball.y += ball.velocityY;
-    context.fillRect(ball.x, ball.y, ball.width, ball.height);
+    context.fillRect(ball.x, ball.y, ballWidth, ballHeight);
     // if ball touches bottom or top of canvas - reverse direction
     if (ball.y <= 0 || (ball.y + ballHeight >= boardHeight)){
         ball.velocityY *= -1;
@@ -103,10 +103,10 @@ function update (){
     // Score
     context.font = "45px sans-serif";
     context.fillText(player1Score, boardWidth/5, 45);
-    context.fillText(player2Score, boardWidth * 4/5 - 45, 45);
+    context.fillText(player2Score, boardWidth*4/5 - 45, 45);
     //dotted line in center of canvas
     for (let i = 10; i < board.height; i += 25){
-        context.fillRect(board.width/2 - 10, i, 5, 5);
+        context.fillRect(board.width /2 - 10, i, 5, 5);
     }
 }
 
