@@ -7,6 +7,11 @@ let score = 0;
 let currTile;
 let otherTile;
 
+// Countdown
+let startLevel1Time = 3;
+let time = startLevel1Time * 60;
+const countDown = document.getElementById("countdown");
+
 window.onload = function () {
     startGame();
 
@@ -16,6 +21,8 @@ window.onload = function () {
         generateCandy();
     }, 100);
 }
+
+setInterval(updateCountDown, 1000);
 
 function randomCandy() {
     return candies[Math.floor(Math.random() * candies.length)];
@@ -264,4 +271,13 @@ function generateCandy() {
             board[0][c].src = "./img/" + randomCandy() + ".png";
         }
     }
+}
+
+// CountDown function
+function updateCountDown() {
+    let min = Math.floor(time / 60);
+    let seconds = time % 60;
+
+    countDown.innerText = `${min}:${seconds}`;
+    time --;
 }
